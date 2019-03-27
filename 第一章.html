@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<p>姓名：</p>
+		<input type="text" />
+		<p id="aa">年龄:</p>
+		<input type="text" />
+		<p id="b">地址：</p>
+		<input type="住址" id="c"/><br />
+		<button>确认</button>
+		</div>
+	</body>
+	<script src="jq/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			var $p=$("<p>性别：</p>");
+			$("#aa").before($p);
+			var $input=$("<input />");
+			$("#aa").before($input);
+			$("p").remove("#b");
+			$("input").remove("#c");
+			$("input").after("<label>该项必须填</label>");
+			$("label").css("color","red");
+			
+		})
+	</script>
+</html>
